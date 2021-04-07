@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raulr\\Documents\\Unity Projects\\HexControl\\Hex Control\\Hex Control.csproj",
+      "projectUniqueName": "C:\\Users\\raulr\\Documents\\Unity Projects\\FormHexControl\\HexControl\\Hex Control.csproj",
       "projectName": "Hex Control",
-      "projectPath": "C:\\Users\\raulr\\Documents\\Unity Projects\\HexControl\\Hex Control\\Hex Control.csproj",
+      "projectPath": "C:\\Users\\raulr\\Documents\\Unity Projects\\FormHexControl\\HexControl\\Hex Control.csproj",
       "packagesPath": "C:\\Users\\raulr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raulr\\Documents\\Unity Projects\\HexControl\\Hex Control\\obj\\",
+      "outputPath": "C:\\Users\\raulr\\Documents\\Unity Projects\\FormHexControl\\HexControl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

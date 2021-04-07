@@ -10,12 +10,21 @@ using System.Windows.Forms;
 
 namespace Hex_Control
 {
-    public partial class Form1 : Form
+    public partial class RotationLength : Form
     {
-        public Form1()
+        public RotationLength()
         {
             InitializeComponent();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RotationLength_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
