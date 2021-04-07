@@ -70,6 +70,7 @@ namespace Hex_Control
             this.ActLength.Name = "ActLength";
             this.ActLength.Size = new System.Drawing.Size(125, 27);
             this.ActLength.TabIndex = 3;
+            this.ActLength.TextChanged += new System.EventHandler(this.ActLength_TextChanged);
             // 
             // RotPulses
             // 
@@ -106,7 +107,9 @@ namespace Hex_Control
             // 
             // sendCom
             // 
-            this.sendCom.Location = new System.Drawing.Point(37, 294);
+            this.sendCom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sendCom.Location = new System.Drawing.Point(482, 409);
             this.sendCom.Name = "sendCom";
             this.sendCom.Size = new System.Drawing.Size(144, 29);
             this.sendCom.TabIndex = 8;
@@ -115,7 +118,8 @@ namespace Hex_Control
             // 
             // retOrigin
             // 
-            this.retOrigin.Location = new System.Drawing.Point(200, 294);
+            this.retOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.retOrigin.Location = new System.Drawing.Point(644, 409);
             this.retOrigin.Name = "retOrigin";
             this.retOrigin.Size = new System.Drawing.Size(144, 29);
             this.retOrigin.TabIndex = 9;
