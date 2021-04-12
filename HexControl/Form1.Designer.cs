@@ -39,6 +39,7 @@ namespace Hex_Control
             this.label2 = new System.Windows.Forms.Label();
             this.sendCom = new System.Windows.Forms.Button();
             this.retOrigin = new System.Windows.Forms.Button();
+            this.Test_String = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LinearLength
@@ -70,6 +71,7 @@ namespace Hex_Control
             this.ActLength.Name = "ActLength";
             this.ActLength.Size = new System.Drawing.Size(125, 27);
             this.ActLength.TabIndex = 3;
+            this.ActLength.Text = "300";
             this.ActLength.TextChanged += new System.EventHandler(this.ActLength_TextChanged);
             // 
             // RotPulses
@@ -78,6 +80,7 @@ namespace Hex_Control
             this.RotPulses.Name = "RotPulses";
             this.RotPulses.Size = new System.Drawing.Size(125, 27);
             this.RotPulses.TabIndex = 5;
+            this.RotPulses.Text = "10000";
             // 
             // PulseperRotations
             // 
@@ -95,6 +98,7 @@ namespace Hex_Control
             this.RotLength.Name = "RotLength";
             this.RotLength.Size = new System.Drawing.Size(125, 27);
             this.RotLength.TabIndex = 7;
+            this.RotLength.Text = "5";
             // 
             // label2
             // 
@@ -111,26 +115,37 @@ namespace Hex_Control
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCom.Location = new System.Drawing.Point(482, 409);
             this.sendCom.Name = "sendCom";
-            this.sendCom.Size = new System.Drawing.Size(144, 29);
+            this.sendCom.Size = new System.Drawing.Size(620, 29);
             this.sendCom.TabIndex = 8;
             this.sendCom.Text = "Send Command";
             this.sendCom.UseVisualStyleBackColor = true;
+            this.sendCom.Click += new System.EventHandler(this.sendCom_Click);
             // 
             // retOrigin
             // 
             this.retOrigin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.retOrigin.Location = new System.Drawing.Point(644, 409);
+            this.retOrigin.Location = new System.Drawing.Point(1120, 409);
             this.retOrigin.Name = "retOrigin";
             this.retOrigin.Size = new System.Drawing.Size(144, 29);
             this.retOrigin.TabIndex = 9;
             this.retOrigin.Text = "Return to Origin";
             this.retOrigin.UseVisualStyleBackColor = true;
             // 
+            // Test_String
+            // 
+            this.Test_String.AutoSize = true;
+            this.Test_String.Location = new System.Drawing.Point(2, 226);
+            this.Test_String.Name = "Test_String";
+            this.Test_String.Size = new System.Drawing.Size(50, 20);
+            this.Test_String.TabIndex = 10;
+            this.Test_String.Text = "label1";
+            // 
             // RotationLength
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1276, 450);
+            this.Controls.Add(this.Test_String);
             this.Controls.Add(this.retOrigin);
             this.Controls.Add(this.sendCom);
             this.Controls.Add(this.RotLength);
@@ -161,6 +176,7 @@ namespace Hex_Control
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button sendCom;
         private System.Windows.Forms.Button retOrigin;
+        private System.Windows.Forms.Label Test_String;
     }
 }
 
