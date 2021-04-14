@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hex_Control
@@ -21,7 +16,7 @@ namespace Hex_Control
         //public uint OneTurnPulseNum { get; set; }   //10000 RotPulse
 
         public uint accessDistanceUnit;
-        public uint leadDistanceUnit;
+        public float leadDistanceUnit;
         public uint oneTurnPulseNum;
 
         //Control protocol packet
@@ -67,21 +62,21 @@ namespace Hex_Control
 
             if (checkBox1.Checked)
             {
-                _xPos = (Convert.ToUInt32(s_xPos.Text) / leadDistanceUnit) * oneTurnPulseNum * xPos; // 255;
-                _yPos = (Convert.ToUInt32(s_yPos.Text) / leadDistanceUnit) * oneTurnPulseNum * yPos; // 255;
-                _zPos = (Convert.ToUInt32(s_zPos.Text) / leadDistanceUnit) * oneTurnPulseNum * zPos; // 255;
-                _uPos = (Convert.ToUInt32(s_uPos.Text) / leadDistanceUnit) * oneTurnPulseNum * uPos; // 255;
-                _vPos = (Convert.ToUInt32(s_vPos.Text) / leadDistanceUnit) * oneTurnPulseNum * vPos; // 255;
-                _wPos = (Convert.ToUInt32(s_wPos.Text) / leadDistanceUnit) * oneTurnPulseNum * wPos; // 255;
+                _xPos = Convert.ToUInt32(((Convert.ToUInt32(s_xPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * xPos); // 255;
+                _yPos = Convert.ToUInt32(((Convert.ToUInt32(s_yPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * yPos); // 255;
+                _zPos = Convert.ToUInt32(((Convert.ToUInt32(s_zPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * zPos); // 255;
+                _uPos = Convert.ToUInt32(((Convert.ToUInt32(s_uPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * uPos); // 255;
+                _vPos = Convert.ToUInt32(((Convert.ToUInt32(s_vPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * vPos); // 255;
+                _wPos = Convert.ToUInt32(((Convert.ToUInt32(s_wPos.Text) + 5) / leadDistanceUnit) * oneTurnPulseNum * wPos); // 255;
             }
             else
             {
-                _xPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * xPos; // 255;
-                _yPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * yPos; // 255;
-                _zPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * zPos; // 255;
-                _uPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * uPos; // 255;
-                _vPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * vPos; // 255;
-                _wPos = (accessDistanceUnit / leadDistanceUnit) * oneTurnPulseNum * wPos; // 255;
+                _xPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * xPos); // 255;
+                _yPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * yPos); // 255;
+                _zPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * zPos); // 255;
+                _uPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * uPos); // 255;
+                _vPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * vPos); // 255;
+                _wPos = Convert.ToUInt32(((accessDistanceUnit + 5) / leadDistanceUnit) * oneTurnPulseNum * wPos); // 255;
             }
 
             str.Append(confirmCode.ToString("X4"));
